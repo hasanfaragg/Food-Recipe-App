@@ -7,23 +7,50 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './Components/home/home.component';
 import { FeedComponent } from './Components/feed/feed.component';
 /* import auth*/
-import {AuthModule} from './AuthModule/auth.module';
-import{UserModule} from './UserModule/user.module';
+import { AuthModule } from './AuthModule/auth.module';
+import { UserModule } from './UserModule/user.module';
 
+import {
+  SocialLoginModule,
+  SocialAuthServiceConfig,
+} from '@abacritt/angularx-social-login';
+import {
+  GoogleLoginProvider,
+  FacebookLoginProvider,
+} from '@abacritt/angularx-social-login';
+import { FormsModule } from '@angular/forms';
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    FeedComponent
-  ],
+  declarations: [AppComponent, HomeComponent, FeedComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AuthModule,   
-    UserModule
+    AuthModule,
+    SocialLoginModule,
+    UserModule,
+    FormsModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider('clientId'),
+          },
+          {
+            id: FacebookLoginProvider.PROVIDER_ID,
+            provider: new FacebookLoginProvider('clientId'),
+          },
+        ],
+        onError: (err) => {
+          console.error(err);
+        },
+      } as SocialAuthServiceConfig,
+    },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
