@@ -18,7 +18,7 @@ import {
   GoogleLoginProvider,
   FacebookLoginProvider,
 } from '@abacritt/angularx-social-login';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [AppComponent, HomeComponent, FeedComponent],
   imports: [
@@ -28,6 +28,7 @@ import {
     AuthModule,
     SocialLoginModule,
     UserModule,
+    FormsModule,
   ],
   providers: [
     {

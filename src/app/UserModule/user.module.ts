@@ -4,6 +4,9 @@ import { UserPreferencesComponent } from './user-preferences/user-preferences.co
 import { UserCollectionsComponent } from './user-collections/user-collections.component';
 import { UserSettingsComponent } from './user-settings/user-settings.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { AppRoutingModule } from '../app-routing.module';
+import { FormsModule } from '@angular/forms';
+import { CollectionDetailsComponent } from './collection-details/collection-details.component';
 
 @NgModule({
   declarations: [
@@ -11,7 +14,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     UserPreferencesComponent,
     UserCollectionsComponent,
     UserProfileComponent,
+    CollectionDetailsComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, AppRoutingModule, FormsModule],
 })
 export class UserModule {}
