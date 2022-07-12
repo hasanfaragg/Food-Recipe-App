@@ -1,0 +1,10 @@
+.content{
+    overflow: auto;
+    position: relative;
+    flex: 1;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}

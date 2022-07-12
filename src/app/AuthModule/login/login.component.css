@@ -1,0 +1,22 @@
+.logo {
+    width: 100px;
+    height: auto;
+    border: 50%;
+}
+
+.loginBtn {
+    width: 240px;
+    min-width: 16.5em;
+    height: 40px;
+    margin: 10px;
+}
+
+.loginBtnIcon {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    display: inline-block;
+    padding: 3px 3px;
+    text-align: center;
+    border-radius: 50%;
+}
