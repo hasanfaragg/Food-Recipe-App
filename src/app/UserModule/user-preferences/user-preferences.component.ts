@@ -10,6 +10,7 @@ import { PreferencesService } from 'src/app/Services/Profile Services/Preference
 export class UserPreferencesComponent implements OnInit {
   public preferencesListIsShown = [false, false];
 
+
   public allPreferences: PreferencesModel[];
   public allCat = ['DIETS', 'ALLERGIES'];
   public preferencesList: PreferencesModel[];
