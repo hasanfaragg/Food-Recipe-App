@@ -6,7 +6,8 @@ import { UserSettingsComponent } from './user-settings/user-settings.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { FormsModule } from '@angular/forms';
-import { CollectionDetailsComponent } from './collection-details/collection-details.component';
+import { CollectionDetailsComponent } from './Shared Cpmponents/collection-details/collection-details.component';
+import { ChangeCusorDirective } from './ChangeCursorDirective/change-cusor.directive';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { CollectionDetailsComponent } from './collection-details/collection-deta
     UserCollectionsComponent,
     UserProfileComponent,
     CollectionDetailsComponent,
+    ChangeCusorDirective,
   ],
   imports: [CommonModule, AppRoutingModule, FormsModule],
 })

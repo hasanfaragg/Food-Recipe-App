@@ -34,7 +34,7 @@ main-page {
 }
 
 .user-info {
-    min-width: 300px;
+    min-width: 220px;
 }
 
 .bio {
@@ -51,7 +51,7 @@ main-page {
     cursor: pointer;
 }
 
-.ver-line {
+.sep-line {
     width: 1px;
     height: 20px;
     margin: 0px 5px;
@@ -70,13 +70,17 @@ main-page {
 
 a {
     text-decoration: none;
-    font-weight: 500;
-    margin: 0px 5px;
+    font-weight: 400;
+    margin: 5px 5px;
+    font-size: .8em;
+    font-weight: 300;
+    padding-bottom: 10px;
+    border-bottom: 3px white solid;
 }
 
 .inside-nav {
     margin: auto;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     white-space: nowrap;
 }
@@ -84,4 +88,12 @@ a {
 .active {
     padding-bottom: 10px;
     border-bottom: 3px #3a9691 solid;
+}
+
+@media screen and (max-width: 992px) {
+    .sep-line {
+        width: 20px;
+        height: 1px;
+        margin: 5px 0px;
+    }
 }
